@@ -1,6 +1,309 @@
+<!DOCTYPE html>
 <html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="An embodied foundation model for visual navigation that generalizes across environments and robots, and can be readily adapted to downstream tasks.">
+  <meta name="keywords" content="ViNT, robotics, foundation model">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ViNT: An Embodied Foundation Model for Visual Navigation</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RP4PXW5RP7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-RP4PXW5RP7');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
 <body>
-Test
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://cs.berkeley.edu/~shah">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://sites.google.com/view/drive-any-robot">
+              GNM: A General Navigation Model to Drive Any Robot
+            </a>
+            <a class="navbar-item" href="https://sites.google.com/view/viking-release">
+              ViKiNG: Kilometer-Scale Navigatin with Geographic Hints
+            </a>
+            <a class="navbar-item" href="sites.google.com/view/lmnav">
+              LM-Nav: Navigation with Pre-Trained Language and Vision Models
+            </a>
+            <a class="navbar-item" href="sites.google.com/view/fastrlap">
+              FastRLAP: High-Speed Driving via Real-World Online RL
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-2 publication-title">ViNT: An Embodied Foundation Model for Visual Navigation</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://keunhong.com">Dhruv Shah</a><sup>&#8224;</sup>,</span>
+              <span class="author-block">
+                <a href="https://utkarshsinha.com">Ajay Sridhar</a><sup>&#8224;</sup>,</span>
+              <span class="author-block">
+                <a href="https://jonbarron.info">Nitish Dashora</a><sup>&#8224;</sup>,
+              </span> <br>
+              <span class="author-block">
+                <a href="http://sofienbouaziz.com">Kyle Stachowicz</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.danbgoldman.com">Kevin Black</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://homes.cs.washington.edu/~seitz/">Noriaki Hirose</a>,
+              </span>
+              <span class="author-block">
+                <a href="http://www.ricardomartinbrualla.com">Sergey Levine</a>
+              </span>
+            </div>
+
+            <div class="is-size-6 publication-authors">
+              <span class="author-block">UC Berkeley</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2011.12948" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2011.12948" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/google/nerfies" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video id="teaser" autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/teaser.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+          free-viewpoint
+          portraits.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-steve">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/steve.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-chair-tp">
+            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/chair-tp.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-shiba">
+            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/shiba.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-fullbody">
+            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/fullbody.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-blueshirt">
+            <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/blueshirt.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-mask">
+            <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/mask.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-coffee">
+            <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/coffee.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-toby">
+            <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/toby2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              General-purpose pre-trained models (``foundation models'') have enabled practitioners to produce
+              generalizable solutions for individual machine learning problems with datasets that are significantly
+              smaller than those required for learning from scratch. Such models are typically trained on large and
+              diverse datasets with weak supervision, consuming much more training data than is available for any
+              individual downstream application.
+            </p>
+            <p>
+              In this paper, we describe the Visual Navigation Transformer (ViNT), a <i>foundation model</i> that aims
+              to bring the success of general-purpose pre-trained models to vision-based robotic navigation. ViNT is
+              trained with a general goal-reaching objective that can be used with any navigation dataset, and employs a
+              flexible Transformer-based architecture to learn navigational affordances and enable efficient adaptation
+              to a variety of downstream navigational tasks. ViNT is trained on a number of existing navigation
+              datasets, comprising hundreds of hours of robotic navigation from a variety of different robotic
+              platforms, and exhibits \emph{positive transfer}, outperforming specialist models trained on narrower
+              datasets.
+            </p>
+            <p>
+              ViNT can be augmented with diffusion-based goal proposals to explore novel environments, and can solve
+              kilometer-scale navigation problems when equipped with long-range heuristics. ViNT can also be adapted to
+              novel task specifications with a technique inspired by prompt-tuning, where the goal encoder is replaced
+              by an encoding of another task modality (e.g., GPS waypoints or turn-by-turn directions) embedded into the
+              same space of goal tokens. This flexibility and ability to accommodate a variety of downstream problem
+              domains establish ViNT as an effective foundation model for mobile robotics.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+
+
+      <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+          <h2 class="title">BibTeX</h2>
+          <pre><code>@article{shah2023vint,
+  author    = {Dhruv Shah and Ajay Sridhar and Nitish Dashora 
+               and Kyle Stachowicz and Kevin Black and Noriaki Hirose and Sergey Levine},
+  title     = {{ViNT: An Embodied Foundation Model for Visual Navigation}},
+  journal   = {arXiv pre-print},
+  year      = {2023},
+  url       = {https://arxiv.org/abs/2306.xxxx},
+}</code></pre>
+        </div>
+      </section>
+
+
+      <footer class="footer">
+        <div class="container">
+          <div class="content has-text-centered">
+            <a class="icon-link" href="./static/videos/nerfies_paper.pdf">
+              <i class="fas fa-file-pdf"></i>
+            </a>
+            <a class="icon-link" href="https://github.com/PrieureDeSion/visualnav-transformer" class="external-link"
+              disabled>
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <div class="columns is-centered">
+            <div class="column is-8">
+              <div class="content">
+                <p>
+                  The website template was borrowed from <a href="https://nerfies.github.io>"
+                    class="external-link"><span class="dnerf">Nerfies</span></a>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
 </body>
 
 </html>
