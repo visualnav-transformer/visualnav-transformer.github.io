@@ -135,6 +135,11 @@ body {
   object-fit: contain;
 }
 
+.results-carousel {
+  width: 95%;
+  margin: 0 auto;
+}
+
 .results-carousel .item {
   margin: 5px;
   overflow: hidden;
