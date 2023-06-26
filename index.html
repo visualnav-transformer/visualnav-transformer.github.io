@@ -165,7 +165,7 @@
     <div class="container is-max-desktop is-centered has-text-justified is-size-4">
       <div class="hero-body">
         <video id="teaser" autoplay muted loop playsinline height="100%">
-          <source src="./static/videos/teaser.mov" type="video/mp4">
+          <source src="./static/videos/teaser.mp4" type="video/mp4">
         </video>
         ViNT is a goal-conditioned navigation policy trained on diverse, cross-embodiment training data, and can control
         many different robots in zero-shot. It can also be efficiently fine-tuned, or <i>adapted</i>, to new robots and
@@ -342,6 +342,17 @@
           <source src="./static/videos/vint_videos_rfs.mp4" type="video/mp4">
         </video>
       </div>
+
+      <p> To further show the different exploration behaviors supported by ViNT, here we deploy a locobot to explore an
+        office floor from the same starting point but with two different position goals to guide the search.
+
+        Starting from the same position, the different goals lead the robot to two different parts of the building,
+        and both trajectories succeed in reaching their goals.
+      </p> <br>
+
+      <video poster="" id="both-compare" autoplay controls muted loop playsinline width="100%">
+        <source src="./static/videos/vint_videos_soda3_both.mp4" type="video/mp4">
+      </video>
     </div>
   </section>
 
@@ -362,9 +373,11 @@
           <div class="column is-two-thirds">
             <img src="./static/images/vint_finetuning.jpg" alt="ViNT fine-tuning" width="80%" />
             <div class="content has-text-justified" width="80%">
-              ViNT can transfer navigational affordances to novel tasks (40% success without fine-tuning), and
-              efficiently masters the task (80% success) with less than 1 hour of fine-tuning data. ViNT
-              fine-tuning (green) outperforms a single-domain model trained with 5&#x2715; data (orange).
+              ViNT can transfer navigational affordances to novel tasks (40% success in zero-shot), and
+              efficiently masters the task (80% success) with less than 1 hour of fine-tuning data. <span
+                class="vint">ViNT
+                fine-tuning</span> outperforms <span class="baseline">a <i>specialist</i> model trained with 5&#x2715;
+                data</span>.
             </div>
           </div>
           <div class="column is-one-thirds is-centered">
@@ -376,7 +389,7 @@
           </div>
         </div>
         <video poster="" id="carla-main" autoplay controls muted loop playsinline width="100%">
-          <source src="./static/videos/vint_videos_carla.mov" type="video/mp4">
+          <source src="./static/videos/vint_videos_carla.mp4" type="video/mp4">
         </video>
         <div class="content has-text-justified" width="80%">
           This allows ViNT to be adapted to a variety of new <span class="newrobot">robots</span>, <span

@@ -33,6 +33,14 @@ body {
   color: #e6ab02
 }
 
+.vint {
+  color: #1b9e77
+}
+
+.baseline {
+  color: #d95f02
+}
+
 .teaser .hero-body {
   padding-top: 0;
   padding-bottom: 3rem;
