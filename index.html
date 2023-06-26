@@ -4,10 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-    content="An embodied foundation model for visual navigation that generalizes across environments and robots, and can be readily adapted to downstream tasks.">
+    content="A foundation model for visual navigation that generalizes across environments and robots, and can be readily adapted to downstream tasks.">
   <meta name="keywords" content="ViNT, robotics, foundation model">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ViNT: An Embodied Foundation Model for Visual Navigation</title>
+  <title>ViNT: A Foundation Model for Visual Navigation</title>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RP4PXW5RP7"></script>
@@ -84,26 +84,26 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-2 publication-title">ViNT: An Embodied Foundation Model <br> for Visual Navigation</h1>
+            <h1 class="title is-2 publication-title">ViNT: A Foundation Model for Visual Navigation</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="https://keunhong.com">Dhruv Shah</a><sup>&#8224;</sup>,</span>
+                <a href="https://cs.berkeley.edu/~shah">Dhruv Shah</a><sup>&#8224;</sup>,</span>
               <span class="author-block">
-                <a href="https://utkarshsinha.com">Ajay Sridhar</a><sup>&#8224;</sup>,</span>
+                <a href="">Ajay Sridhar</a><sup>&#8224;</sup>,</span>
               <span class="author-block">
-                <a href="https://jonbarron.info">Nitish Dashora</a><sup>&#8224;</sup>,
+                <a href="https://dashora7.github.io">Nitish Dashora</a><sup>&#8224;</sup>,
               </span> <br>
               <span class="author-block">
-                <a href="http://sofienbouaziz.com">Kyle Stachowicz</a>,
+                <a href="https://kylesta.ch">Kyle Stachowicz</a>,
               </span>
               <span class="author-block">
-                <a href="https://www.danbgoldman.com">Kevin Black</a>,
+                <a href="https://kevin.black">Kevin Black</a>,
               </span>
               <span class="author-block">
-                <a href="https://homes.cs.washington.edu/~seitz/">Noriaki Hirose</a>,
+                <a href="https://sites.google.com/view/noriaki-hirose/">Noriaki Hirose</a>,
               </span>
               <span class="author-block">
-                <a href="http://www.ricardomartinbrualla.com">Sergey Levine</a>
+                <a href="https://cs.berkeley.edu/~svlevine">Sergey Levine</a>
               </span>
             </div>
 
@@ -115,7 +115,7 @@
               <div class="publication-links">
                 <!-- PDF Link. -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2011.12948" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://arxiv.org/pdf/2306.xxxx" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
@@ -123,7 +123,7 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2011.12948" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://arxiv.org/abs/2306.xxxx" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
@@ -142,7 +142,8 @@
                 </span>
                 <!-- Code Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/google/nerfies" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://github.com/PrieureDeSion/visualnav-transformer"
+                    class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
@@ -164,65 +165,78 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <video id="teaser" autoplay muted loop playsinline height="100%">
-          <source src="./static/videos/teaser.mp4" type="video/mp4">
+          <source src="./static/videos/teaser.mov" type="video/mp4">
         </video>
-        <h2 class="subtitle has-text-centered">
-          Something description.
-        </h2>
       </div>
     </div>
   </section>
 
+  <!-- vint_videos_bww1.mp4
+            vint_videos_bww3.mp4
+            vint_videos_carla.mp4
+            vint_videos_go1_outside.mp4
+            vint_videos_pedestrian.mp4
+            vint_videos_rfs.mp4
+            vint_videos_soda3_both.mp4
+            vint_videos_soda3_left.mp4
+            vint_videos_go_inside_1.mp4
+            vint_videos_go1_inside_2.mp4
+            vint_videos_soda3_right.mp4 -->
 
+  <!-- Results Carousel -->
   <section class="hero is-light is-small">
     <div class="hero-body">
       <div class="container">
         <div id="results-carousel" class="carousel results-carousel">
           <div class="item item-steve">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/steve.mp4" type="video/mp4">
+              <source src="./static/videos/vint_videos_bww1.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-chair-tp">
             <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/chair-tp.mp4" type="video/mp4">
+              <source src="./static/videos/vint_videos_go1_outside.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-shiba">
             <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/shiba.mp4" type="video/mp4">
+              <source src="./static/videos/vint_videos_soda3_left.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-fullbody">
             <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/fullbody.mp4" type="video/mp4">
+              <source src="./static/videos/vint_videos_rfs.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-blueshirt">
             <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/blueshirt.mp4" type="video/mp4">
+              <source src="./static/videos/vint_videos_go_inside_1.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-mask">
             <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/mask.mp4" type="video/mp4">
+              <source src="./static/videos/vint_videos_pedestrian.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-coffee">
             <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/coffee.mp4" type="video/mp4">
+              <source src="./static/videos/vint_videos_carla.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-toby">
             <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/toby2.mp4" type="video/mp4">
+              <source src="./static/videos/vint_videos_go1_inside_2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-shiba">
+            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/vint_videos_soda3_right.mp4" type="video/mp4">
             </video>
           </div>
         </div>
       </div>
     </div>
   </section>
-
 
   <section class="section">
     <div class="container is-max-desktop">
@@ -232,7 +246,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              General-purpose pre-trained models (``foundation models'') have enabled practitioners to produce
+              General-purpose pre-trained models ("foundation models") have enabled practitioners to produce
               generalizable solutions for individual machine learning problems with datasets that are significantly
               smaller than those required for learning from scratch. Such models are typically trained on large and
               diverse datasets with weak supervision, consuming much more training data than is available for any
@@ -245,155 +259,110 @@
               flexible Transformer-based architecture to learn navigational affordances and enable efficient adaptation
               to a variety of downstream navigational tasks. ViNT is trained on a number of existing navigation
               datasets, comprising hundreds of hours of robotic navigation from a variety of different robotic
-              platforms, and exhibits \emph{positive transfer}, outperforming specialist models trained on narrower
+              platforms, and exhibits <i>positive transfer</i>, outperforming specialist models trained on singular
               datasets.
             </p>
             <p>
-              ViNT can be augmented with diffusion-based goal proposals to explore novel environments, and can solve
+              ViNT can be augmented with diffusion-based subgoal proposals to explore novel environments, and can solve
               kilometer-scale navigation problems when equipped with long-range heuristics. ViNT can also be adapted to
               novel task specifications with a technique inspired by prompt-tuning, where the goal encoder is replaced
-              by an encoding of another task modality (e.g., GPS waypoints or turn-by-turn directions) embedded into the
+              by an encoding of another task modality (e.g., GPS waypoints or routing commands) embedded into the
               same space of goal tokens. This flexibility and ability to accommodate a variety of downstream problem
-              domains establish ViNT as an effective foundation model for mobile robotics.
+              domains establishes ViNT as an effective foundation model for mobile robotics.
             </p>
           </div>
         </div>
       </div>
+
       <!--/ Abstract. -->
 
       <!-- Paper video. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Video</h2>
+          <h2 class="title is-3">Summary Video</h2>
           <div class="publication-video">
-            <!---TODO Dhruv: put video link here-->>
-            <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <!---TODO Dhruv: put video link here-->
+            <iframe src="https://www.youtube.com/embed/ICeD6iOglKc?rel=0&amp;showinfo=0" frameborder="0"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
-      <!--/ Paper video. -->
+    </div>
+  </section>
+  <!--/ Paper video. -->
 
+  <section class="section">
+    <div class="container is-max-desktop">
       <!-- Method overview -->
+      <center>
+        <h2 class="title is-3">Overview</h2>
+      </center>
+      <br>
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Method Overview</h2>
 
-          <!-- Architecture -->
-          <h3 class="title is-3">Architecture</h3>
-          <div class="content has-text-justified">
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-4">ViNT Architecture</h2>
             <p>
-              We aggregate individual single-robot vision-based navigation datasets into a large heterogeneous dataset, and train a single policy
-              with a goal-reaching objective. The policy is a Transformer-based model that takes in a visual observation and a goal token, and it outputs 
-              actions and a temporal distance to the goal. Our architecture (shown below) is optimized for: 
+              ViNT uses a Transformer-based architecture to encode visual observations and goals, and predicts
+              temporal distance and normalized actions in an embodiment-agnostic manner.
             </p>
-            <ol type="i">
-              <li> 
-                efficient inference on resource-constrained robots, and
-              </li>
-              <li>
-                the ability to prompt and fine-tune for downstream task.
-              </li>
-            </ol>  
-            <!-- Image resource centered and not column and not squashed -->
-            <div class="publication-body">
-              <figure class="image is-16by9">
-                <img src="./static/images/architecture.png" alt="ViNT architecture"> <!-- TODO: Make the image larger-->
-              </figure>
-            </div>
-            <!--/ Architecture -->
-
-            <!-- Subgoal Generation with Diffusion -->
-            <h3 class="title is-3">Exploration</h3>
-            <p> <!-- Caption from the paper -->
-              We use physical search with a topological graph-based planner to explore the environment. An image-to-image diffusion model proposes 
-              diverse exploration targets which are spatially grounded using ViNT (yellow), and scored using a goal-directed heuristic h. 
-              Subgoals are added to the topological graph M and executed using the ViNT policy
-            </p>
-            
-            <div class="publication-body">
-              <figure class="image is-16by9">
-                <img src="./static/images/search_overview.jpg" alt="ViNT architecture"> <!-- TODO: Make the image larger-->
-              </figure>
-            </div>
-            <!--/ Subgoal Generation with Diffusion-->
+            <figure id="architecture">
+              <img src="./static/images/vint_architecture.jpg" alt="ViNT architecture" />
+            </figure>
           </div>
         </div>
-      </div>
-      <!--/ Method overview-->
 
-      <!-- Long-Range Navigation -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Long-Range Navigation</h2>
-          <div class="content has-text-justified">
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-4">Adaptation</h2>
             <p>
-              We apply ViNT to Long-Range Navigation by combining it with an episodic memory formed
-              by a topological graph, which provides short-horizon subgoals for reaching faraway locations.
+              ViNT can be fine-tuned by a mechanism akin to <i>prompt-tuning</i>, to support alternative goal
+              modalities.
             </p>
+            <figure id="adaptation">
+              <img src="./static/images/vint_adaptation.jpg" alt="ViNT adaptation" />
+            </figure>
           </div>
         </div>
-      </div>
-      <!--/ Long-Range Navigatio-->
 
-      <!-- Long-Range Navigation -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Finetuning for Different Goal Modalities</h2>
-          <div class="content has-text-justified">
-            <p>
-              While specifying image goals gives a general pre-training objective, 
-              ViNT can easily be adapted to other common forms of goal-specification 
-              by learning a “soft prompt” mapping from the desired goal modality to the ViNT goal token [10].
-            </p>
-          </div>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <div class="content">
+          <h2 class="title is-4">Search Overview</h2>
+          <p>
+            ViNT can explore <i>previously unseen</i> environments by employing a topological graph-based global
+            planner. An image-to-image diffusion model proposes diverse exploration targets which are spatially grounded
+            using ViNT (yellow), and scored using a goal-directed heuristic <i>h</i>. Subgoals are added to the
+            topological graph and executed using the ViNT policy.
+          </p>
+          <figure id="subgoal">
+            <img src="./static/images/vint_search_overview.jpg" alt="Overview of heuristic-guided search with ViNT" />
+          </figure>
         </div>
-      </div>
-      <!--/ Finetuning-->
-
-        
+  </section>
 
 
 
-      <section class="section" id="BibTeX">
-        <div class="container is-max-desktop content">
-          <h2 class="title">BibTeX</h2>
-          <pre><code>@article{shah2023vint,
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{shah2023vint,
   author    = {Dhruv Shah and Ajay Sridhar and Nitish Dashora 
                and Kyle Stachowicz and Kevin Black and Noriaki Hirose and Sergey Levine},
-  title     = {{ViNT: An Embodied Foundation Model for Visual Navigation}},
+  title     = {{ViNT: A Foundation Model for Visual Navigation}},
   journal   = {arXiv pre-print},
   year      = {2023},
   url       = {https://arxiv.org/abs/2306.xxxx},
 }</code></pre>
-        </div>
-      </section>
+    </div>
+  </section>
 
-
-      <footer class="footer">
-        <div class="container">
-          <div class="content has-text-centered">
-            <a class="icon-link" href="./static/videos/nerfies_paper.pdf">
-              <i class="fas fa-file-pdf"></i>
-            </a>
-            <a class="icon-link" href="https://github.com/PrieureDeSion/visualnav-transformer" class="external-link"
-              disabled>
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
-          <div class="columns is-centered">
-            <div class="column is-8">
-              <div class="content">
-                <p>
-                  The website template was borrowed from <a href="https://nerfies.github.io>"
-                    class="external-link"><span class="dnerf">Nerfies</span></a>.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-
+  <center class="is-size-10">
+    The website template was borrowed from <a href="https://nerfies.github.io>" class="external-link"><span
+        class="dnerf">Nerfies</span></a>.
+  </center>
 </body>
 
 </html>
