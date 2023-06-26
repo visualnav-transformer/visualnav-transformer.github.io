@@ -316,9 +316,7 @@
             using ViNT (yellow), and scored using a goal-directed heuristic <i>h</i>. Subgoals are added to the
             topological graph and executed using the ViNT policy.
           </p>
-          <figure id="subgoal">
-            <img src="./static/images/vint_search_overview.jpg" alt="Overview of heuristic-guided search with ViNT" />
-          </figure>
+          <img src="./static/images/vint_search_overview.jpg" alt="Overview of heuristic-guided search with ViNT" />
         </div>
   </section>
 
@@ -335,15 +333,17 @@
           ViNT solving a 1.5km navigation problem in a previously unseen environment, using a heuristic that
           estimates the distance to the goal using a pre-trained depth model.
         </p>
-        <video poster="" id="go1-inside-2-main" autoplay controls muted loop playsinline width="32%">
-          <source src="./static/videos/small/vint_videos_go1_inside_1.mp4" type="video/mp4">
-        </video>
-        <video poster="" id="bww1-main" autoplay controls muted loop playsinline width="32%">
-          <source src="./static/videos/small/vint_videos_bww1.mp4" type="video/mp4">
-        </video>
-        <video poster="" id="rfs-main" autoplay controls muted loop playsinline width="32%">
-          <source src="./static/videos/small/vint_videos_rfs.mp4" type="video/mp4">
-        </video>
+        <div class="videos-flex">
+          <video poster="" id="go1-inside-2-main" autoplay controls muted loop playsinline>
+            <source src="./static/videos/small/vint_videos_go1_inside_1.mp4" type="video/mp4">
+          </video>
+          <video poster="" id="bww1-main" autoplay controls muted loop playsinline>
+            <source src="./static/videos/small/vint_videos_bww1.mp4" type="video/mp4">
+          </video>
+          <video poster="" id="rfs-main" autoplay controls muted loop playsinline>
+            <source src="./static/videos/small/vint_videos_rfs.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
 
       <p> To further show the different exploration behaviors supported by ViNT, here we deploy a locobot to explore an
@@ -462,7 +462,7 @@
     </section>
 
     <center class="is-size-10">
-      The website template was borrowed from <a href="https://nerfies.github.io>" class="external-link"><span
+      The website template was borrowed from <a href="https://nerfies.github.io" class="external-link"><span
           class="dnerf">Nerfies</span></a>.
     </center>
 </body>
