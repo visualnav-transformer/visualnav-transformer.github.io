@@ -261,6 +261,98 @@
       </div>
       <!--/ Abstract. -->
 
+      <!-- Paper video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <!---TODO Dhruv: put video link here-->>
+            <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <!--/ Paper video. -->
+
+      <!-- Method overview -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Method Overview</h2>
+
+          <!-- Architecture -->
+          <h3 class="title is-3">Architecture</h3>
+          <div class="content has-text-justified">
+            <p>
+              We aggregate individual single-robot vision-based navigation datasets into a large heterogeneous dataset, and train a single policy
+              with a goal-reaching objective. The policy is a Transformer-based model that takes in a visual observation and a goal token, and it outputs 
+              actions and a temporal distance to the goal. Our architecture (shown below) is optimized for: 
+            </p>
+            <ol type="i">
+              <li> 
+                efficient inference on resource-constrained robots, and
+              </li>
+              <li>
+                the ability to prompt and fine-tune for downstream task.
+              </li>
+            </ol>  
+            <!-- Image resource centered and not column and not squashed -->
+            <div class="publication-body">
+              <figure class="image is-16by9">
+                <img src="./static/images/architecture.png" alt="ViNT architecture"> <!-- TODO: Make the image larger-->
+              </figure>
+            </div>
+            <!--/ Architecture -->
+
+            <!-- Subgoal Generation with Diffusion -->
+            <h3 class="title is-3">Exploration</h3>
+            <p> <!-- Caption from the paper -->
+              We use physical search with a topological graph-based planner to explore the environment. An image-to-image diffusion model proposes 
+              diverse exploration targets which are spatially grounded using ViNT (yellow), and scored using a goal-directed heuristic h. 
+              Subgoals are added to the topological graph M and executed using the ViNT policy
+            </p>
+            
+            <div class="publication-body">
+              <figure class="image is-16by9">
+                <img src="./static/images/search_overview.jpg" alt="ViNT architecture"> <!-- TODO: Make the image larger-->
+              </figure>
+            </div>
+            <!--/ Subgoal Generation with Diffusion-->
+          </div>
+        </div>
+      </div>
+      <!--/ Method overview-->
+
+      <!-- Long-Range Navigation -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Long-Range Navigation</h2>
+          <div class="content has-text-justified">
+            <p>
+              We apply ViNT to Long-Range Navigation by combining it with an episodic memory formed
+              by a topological graph, which provides short-horizon subgoals for reaching faraway locations.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Long-Range Navigatio-->
+
+      <!-- Long-Range Navigation -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Finetuning for Different Goal Modalities</h2>
+          <div class="content has-text-justified">
+            <p>
+              While specifying image goals gives a general pre-training objective, 
+              ViNT can easily be adapted to other common forms of goal-specification 
+              by learning a “soft prompt” mapping from the desired goal modality to the ViNT goal token [10].
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Finetuning-->
+
+        
+
 
 
       <section class="section" id="BibTeX">
