@@ -17,6 +17,21 @@ body {
   font-variant: small-caps;
 }
 
+.newrobot {
+  color: #1b9e77
+}
+
+.newenv {
+  color: #d95f02
+}
+
+.newobjective {
+  color: #7570b3
+}
+
+.newgoal {
+  color: #e6ab02
+}
 
 .teaser .hero-body {
   padding-top: 0;
