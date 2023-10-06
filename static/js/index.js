@@ -18,7 +18,7 @@ $(document).ready(function () {
     autoplay: false,
     dots: true,
     draggable: false,
-    touchMove: false,
+    touchMove: true,
     lazyLoad: 'progressive',
     responsive: [
       {
