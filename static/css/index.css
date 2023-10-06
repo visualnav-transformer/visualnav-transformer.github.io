@@ -41,6 +41,11 @@ body {
   color: #d95f02
 }
 
+.oraltalk {
+  color: #ff0000;
+  font-weight: bold;
+}
+
 .teaser .hero-body {
   padding-top: 0;
   padding-bottom: 3rem;
@@ -160,7 +165,7 @@ body {
   flex-wrap: wrap;
 }
 
-.videos-flex > video {
+.videos-flex>video {
   margin: 0.2rem;
   min-width: 200px;
   max-width: 300px;
