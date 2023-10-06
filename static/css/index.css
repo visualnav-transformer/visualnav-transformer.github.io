@@ -85,6 +85,10 @@ body {
   color: #555;
   width: fit-content;
   font-weight: bold;
+  margin: 0 auto;
+  /* Center horizontally */
+  text-align: center;
+  /* Center text within the element */
 }
 
 .publication-awards {
